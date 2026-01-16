@@ -10,8 +10,14 @@ output "load_balancer_hostname" {
   value       = kubernetes_service.example_lb.status[0].load_balancer[0].ingress[0].hostname
 }
 
-# Endereço do Banco de Dados
+# Endpoint do Banco de Dados
 output "rds_endpoint" {
   description = "Endpoint do PostgreSQL"
   value       = aws_db_instance.postgres.endpoint
+}
+
+# IP do Banco de Dados
+output "rds_IP" {
+  description = "IP do PostgreSQL"
+  value       = aws_db_instance.postgres.address
 }
