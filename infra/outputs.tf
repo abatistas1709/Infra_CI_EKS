@@ -7,7 +7,7 @@ output "kubeconfig_command" {
 # URL pública para acessar seu site/app
 output "load_balancer_hostname" {
   description = "URL do Load Balancer (acesse na porta 8000)"
-  value       = kubernetes_service.example_lb.status[0].load_balancer[0].ingress[0].hostname
+  value       = kubernetes_service.LoadBalancer.status[0].load_balancer[0].ingress[0].hostname
 }
 
 # Endpoint do Banco de Dados
