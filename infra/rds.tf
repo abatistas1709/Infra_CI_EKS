@@ -21,7 +21,7 @@ resource "aws_db_subnet_group" "default" {
 resource "aws_db_instance" "postgres" {
   identifier           = "study-database"
   engine               = "postgres"
-  engine_version       = "16"
+  engine_version       = "13.18"
   instance_class       = "db.${var.instance_type}"
   allocated_storage    = 20
   db_name              = var.db_name
