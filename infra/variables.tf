@@ -19,7 +19,7 @@ variable "instance_type" {
 variable "db_username" {
   description = "Usuário mestre do banco de dados"
   type        = string
-  default     = "root"
+  default     = "postgres"
 }
 
 variable "db_password" {
